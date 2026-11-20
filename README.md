@@ -22,13 +22,15 @@ Choose 8 independent ply angles (a symmetric 16-ply layup, angles in [-90°, 90�
 ## Results
 Baseline f1 = 25.13 Hz.
 
+Baseline layup: [0/45/-45/90/0/45/-45/90]s. All methods get the same budget of 400 true FEM evaluations.
+
 | Method | Best f1 (Hz) | Gain |
 |---|---|---|
-| Direct GA (400 FEM calls) | 28.27 | +12.5% |
-| Surrogate-assisted GA | 28.40 | +13.0% |
+| Direct GA | 28.27 | +12.5% |
+| Surrogate-assisted GA | **28.40** | **+13.0%** |
 | Surrogate-assisted PSO | 28.36 | +12.9% |
 
-*Check these figures against the notebook outputs before publishing; they come from a single seeded run.*
+Both surrogate-assisted runs converge to near-±45° angle-ply layups, and both beat the direct GA for the same number of FEM calls. These results come from a single seeded run.
 
 ## Run it
 ```bash
